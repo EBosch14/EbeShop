@@ -1,7 +1,5 @@
 # Ecomerce Proyect
 
-===
-
 ### Applied Skills
 
 + React Proyect
