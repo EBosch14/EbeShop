@@ -8,14 +8,13 @@ export const getProducts = () =>{
       try {
         const resp = await fetch("https://api.escuelajs.co/api/v1/products");
         const data = await resp.json();
-        setProducts(data.slice(0,10));
-        console.log(products);
+        setProducts(data.slice(20,30));
+        products && console.log(data.slice(20,30));
       } catch (error) {
         return error;
       }
     };
     getProducts();
-    return () => {setProducts()}
   }, []);
 
   return {products};
