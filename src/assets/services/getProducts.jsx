@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-export const getProducts = () =>{
+export const getProducts = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -8,8 +8,7 @@ export const getProducts = () =>{
       try {
         const resp = await fetch("https://api.escuelajs.co/api/v1/products");
         const data = await resp.json();
-        setProducts(data.slice(20,30));
-        products && console.log(data.slice(20,30));
+        setProducts(data);
       } catch (error) {
         return error;
       }
@@ -17,5 +16,5 @@ export const getProducts = () =>{
     getProducts();
   }, []);
 
-  return {products};
-}
+  return { products };
+};
