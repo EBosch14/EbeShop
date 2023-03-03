@@ -4,16 +4,16 @@ export const getProducts = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    const getProducts = async () => {
+    const getProds = async () => {
       try {
-        const resp = await fetch("https://api.escuelajs.co/api/v1/products");
-        const data = await resp.json();
+        const response = await fetch("../../../public/Products.json");
+        const data = await response.json();
         setProducts(data);
       } catch (error) {
-        return error;
+        console.error(error);
       }
     };
-    getProducts();
+    getProds();
   }, []);
 
   return { products };
