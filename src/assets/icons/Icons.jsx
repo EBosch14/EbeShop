@@ -4,6 +4,7 @@ export function AddToCart({ width = "16px", height = "16px" }) {
       style={{ maxWidth: "100%" }}
       width={width}
       height={height}
+      className="fill-slate-50"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 576 512"
     >
@@ -12,12 +13,13 @@ export function AddToCart({ width = "16px", height = "16px" }) {
   );
 }
 
-export function CartIcon({ width = "16px", height = "16px" }) {
+export function CartIcon({ width = "24px", height = "24px" }) {
   return (
     <svg
       style={{ maxWidth: "100%" }}
       width={width}
       height={height}
+      className="fill-slate-50"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 576 512"
     >
@@ -47,6 +49,7 @@ export function MinusIcon({ width = "16px", height = "16px" }) {
       style={{ maxWidth: "100%" }}
       width={width}
       height={height}
+      className="fill-slate-50"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 448 512"
     >
@@ -61,6 +64,7 @@ export function PlusIcon({ width = "16px", height = "16px" }) {
       style={{ maxWidth: "100%" }}
       width={width}
       height={height}
+      className="fill-slate-50"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 448 512"
     >
@@ -75,6 +79,7 @@ export function XmarkIcon({ width = "16px", height = "16px" }) {
       style={{ maxWidth: "100%" }}
       width={width}
       height={height}
+      className="fill-slate-50"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 320 512"
     >

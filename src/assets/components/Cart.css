@@ -1,0 +1,12 @@
+input:checked ~ label ~ aside{
+  height: 100%;
+  display: block;
+}
+
+input:checked + label {
+  background-color: transparent;
+  width: 36px;
+  height: 36px;
+  right: 8px;
+  top: 4px;
+}

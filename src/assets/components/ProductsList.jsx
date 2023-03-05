@@ -18,6 +18,7 @@ export default function () {
               image={prod.image}
               price={prod.price}
               title={prod.title}
+              product={prod}
             ></ProductCard>
           );
         })}

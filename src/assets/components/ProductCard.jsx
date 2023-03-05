@@ -1,8 +1,11 @@
+import { useCart } from "../hooks/useCart";
 import { AddToCart } from "../icons/Icons";
 
-export default function ({ id, image, price, title }) {
-  const defaultImage =
-    "../../../public/DefaultImage.png";
+export default function ({ id, image, price, title, product }) {
+  const defaultImage = "../../../public/DefaultImage.png";
+
+  const { addToCart } = useCart();
+
   return (
     <div
       key={id}
@@ -10,7 +13,9 @@ export default function ({ id, image, price, title }) {
     >
       <img
         src={image}
-        onError={(e) => {e.target.src = defaultImage}}
+        onError={(e) => {
+          e.target.src = defaultImage;
+        }}
         alt=""
         className="rounded-xl w-full block aspect-square object-cover bg-white"
       />
@@ -19,7 +24,10 @@ export default function ({ id, image, price, title }) {
           <strong className="">{title}</strong> -{" "}
           <span className="opacity-80 text-base">${price}</span>
         </h3>
-        <button className="flex items-center justify-center bg-slate-700 hover:bg-slate-600 fill-white py-2 px-3 rounded">
+        <button
+          onClick={() => addToCart(product)}
+          className="flex items-center justify-center bg-slate-700 hover:bg-slate-600 fill-white py-2 px-3 rounded"
+        >
           <AddToCart width="24px" height="24px"></AddToCart>
         </button>
       </div>
