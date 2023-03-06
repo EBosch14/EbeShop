@@ -1,6 +1,6 @@
 # Ecomerce Proyect
 
-[Ir al sitio Web](https://eloquent-moonbeam-d33d22.netlify.app/ "Deploy EbeShop"){target="_blank"}
+[Ir al sitio Web](https://eloquent-moonbeam-d33d22.netlify.app/ "Deploy EbeShop"){:target="_blank"}
 
 ### Applied Skills
 
@@ -15,5 +15,5 @@
 ##### Resources i have used:
 + Platzi Product API
 + Video reference by @midudev
-  * [Twitch](https://www.twitch.tv/midudev/ "https://www.twitch.tv/midudev"){target="_blank"}
-  * [Video](https://www.twitch.tv/videos/1738955695/ "https://www.twitch.tv/videos/1738955695"){target="_blank"}
+  * [Twitch](https://www.twitch.tv/midudev/ "https://www.twitch.tv/midudev"){:target="_blank"}
+  * [Video](https://www.twitch.tv/videos/1738955695/ "https://www.twitch.tv/videos/1738955695"){:target="_blank"}
