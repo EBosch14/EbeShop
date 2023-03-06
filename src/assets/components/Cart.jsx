@@ -3,6 +3,32 @@ import { useCart } from "../hooks/useCart";
 import { CartIcon, MinusIcon, PlusIcon, XmarkIcon } from "../icons/Icons";
 import "./Cart.css";
 
+function CartItem({ addToCart, removeProduct, title, image, quantity }) {
+  return (
+    <li className="pb-4 border-b border-[#444] border-solid flex flex-col gap-2">
+      <img src={image} alt={title} className="aspect-video w-full" />
+      <div className="flex justify-center">
+        <strong className=" text-sm ">{title}</strong>
+      </div>
+      <footer className="flex gap-2 justify-center items-center">
+        <button
+          onClick={removeProduct}
+          className="p-2 bg-zinc-800 rounded-full hover:bg-zinc-700"
+        >
+          <MinusIcon />
+        </button>
+        <small className="w-8 text-center border-b px-1 py-1">{quantity}</small>
+        <button
+          onClick={addToCart}
+          className="p-2 bg-zinc-800 rounded-full hover:bg-zinc-700"
+        >
+          <PlusIcon />
+        </button>
+      </footer>
+    </li>
+  );
+}
+
 export default function Cart() {
   const CART_ID = useId();
   const { cart, clearAllCart, removeProduct, addToCart } = useCart();
@@ -20,33 +46,14 @@ export default function Cart() {
         <ul>
           {cart.map((product, index) => {
             return (
-              <li key={index + product.price} className="pb-4 border-b border-[#444] border-solid flex flex-col gap-2">
-                <img
-                  src={product.image}
-                  alt={product.title}
-                  className="aspect-video w-full"
-                />
-                <div className="flex justify-center">
-                  <strong className=" text-sm ">
-                    {product.title}
-                  </strong>
-                </div>
-                <footer className="flex gap-2 justify-center items-center">
-                  <button 
-                    onClick={() => removeProduct(product)}
-                  className="p-2 bg-zinc-800 rounded-full hover:bg-zinc-700">
-                    <MinusIcon />
-                  </button>
-                  <small className="w-8 text-center border-b px-1 py-1">
-                    {product.quantity}
-                  </small>
-                  <button
-                    onClick={() => addToCart(product)}
-                  className="p-2 bg-zinc-800 rounded-full hover:bg-zinc-700">
-                    <PlusIcon />
-                  </button>
-                </footer>
-              </li>
+              <CartItem
+                key={product.id + product.price}
+                product={product}
+                index={index}
+                addToCart={() => addToCart(product)}
+                removeProduct={() => removeProduct(product)}
+                {...product}
+              />
             );
           })}
         </ul>

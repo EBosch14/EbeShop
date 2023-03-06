@@ -1,3 +1,6 @@
+/* THIS IS THE FIRST METHOD I USED*/
+/* CHANGE IT TO USEREDUCER */
+
 import { createContext, useState } from "react";
 
 export const CartContext = createContext();
