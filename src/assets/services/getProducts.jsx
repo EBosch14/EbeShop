@@ -6,7 +6,7 @@ export const getProducts = () => {
   useEffect(() => {
     const getProds = async () => {
       try {
-        const response = await fetch("../../../public/Products.json");
+        const response = await fetch("/Products.json");
         const data = await response.json();
         setProducts(data);
       } catch (error) {
